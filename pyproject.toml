@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forgetting-and-the-flow"
+version = "0.1.0"
+description = "The Forgetting and the Flow: degradation as method in a real-time image system (NumPy port)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Anamarija Podrebarac (Ami)" }]
+dependencies = ["numpy>=1.24", "pillow>=9.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Artistic Software",
+    "Topic :: Multimedia :: Graphics",
+]
+
+[project.scripts]
+forgetting-and-flow = "forgetting_and_flow.cli:main"
+
+[tool.setuptools]
+packages = ["forgetting_and_flow"]
